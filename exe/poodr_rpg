@@ -1,4 +1,14 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-puts 'Hello, command!'
+require 'optparse'
+
+program_config = {}
+
+opts = OptionParser.new
+
+opts.on('-h', '--help') do
+  puts 'Help me!'
+end
+
+opts.parse!(ARGV)
