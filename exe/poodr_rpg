@@ -3,12 +3,16 @@
 
 require 'optparse'
 
+require 'poodr_rpg'
+
 program_config = {}
 
 opts = OptionParser.new
-
-opts.on('-h', '--help') do
-  puts 'Help me!'
-end
-
+opts.on('-h', '--help') { program_config[:h] = true }
 opts.parse!(ARGV)
+
+if program_config[:h]
+  puts 'Help me!'
+else
+  PoodrRpg::Battle.new.run
+end
