@@ -1,0 +1,24 @@
+PATH
+  remote: .
+  specs:
+    poodr_rpg (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    curses (1.2.5)
+    minitest (5.11.3)
+    rake (10.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.16)
+  curses
+  minitest (~> 5.0)
+  poodr_rpg!
+  rake (~> 10.0)
+
+BUNDLED WITH
+   1.17.1
