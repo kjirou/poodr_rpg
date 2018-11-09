@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'curses'
+
+screen_height = 12
+screen_width = 60
+window_height = screen_height + 2
+window_width = screen_width + 2
+
+window = Curses::Window.new(window_height, window_width, 1, 2)
+window.box('|', '-', '+')
+window.refresh
+
+Curses.init_screen
+sleep 2
+Curses.close_screen
