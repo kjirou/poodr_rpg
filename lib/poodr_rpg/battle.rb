@@ -2,8 +2,17 @@
 
 module PoodrRpg
   class Battle
-    def run
-      puts 'Battle finished.'
+    def initialize
+      @turn_count = 0
+    end
+
+    def proceed
+      @turn_count += 1
+      # do stuff
+    end
+
+    def to_text
+      "Turns: #{@turn_count}"
     end
   end
 end

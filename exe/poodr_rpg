@@ -14,5 +14,5 @@ opts.parse!(ARGV)
 if program_config[:h]
   puts 'Help me!'
 else
-  PoodrRpg::Battle.new.run
+  PoodrRpg::Game.new.run
 end
