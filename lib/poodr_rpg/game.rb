@@ -7,19 +7,18 @@ module PoodrRpg
     end
 
     def run
-      @battle.transit_to_next_turn
-      puts @battle.to_text
-      sleep 1
+      sleep 0.5
 
-      @battle.transit_to_next_turn
-      puts @battle.to_text
-      sleep 1
+      while
+        @battle.transit_to_next_turn
+        puts @battle.to_text
+        sleep 0.5
 
-      @battle.transit_to_next_turn
-      puts @battle.to_text
-      sleep 1
-
-      puts 'Game finished.'
+        if @battle.winner
+          puts 'Game finished.'
+          break
+        end
+      end
     end
   end
 end
