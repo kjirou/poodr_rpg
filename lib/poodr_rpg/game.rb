@@ -7,15 +7,15 @@ module PoodrRpg
     end
 
     def run
-      @battle.proceed
+      @battle.transit_to_next_turn
       puts @battle.to_text
       sleep 1
 
-      @battle.proceed
+      @battle.transit_to_next_turn
       puts @battle.to_text
       sleep 1
 
-      @battle.proceed
+      @battle.transit_to_next_turn
       puts @battle.to_text
       sleep 1
 

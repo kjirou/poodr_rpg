@@ -6,7 +6,7 @@ module PoodrRpg
       @turn_count = 0
     end
 
-    def proceed
+    def transit_to_next_turn
       @turn_count += 1
       # do stuff
     end
