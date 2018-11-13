@@ -6,15 +6,25 @@ module PoodrRpg
       parties = [
         Party.new(
           members: [
-            Member.new(name: 'Foo'),
-            Member.new(name: 'Bar'),
-            Member.new(name: 'Baz')
+            Member.new(
+              creature: Creatures::Villager.new(name: 'Foo')
+            ),
+            Member.new(
+              creature: Creatures::Villager.new(name: 'Bar')
+            ),
+            Member.new(
+              creature: Creatures::Villager.new(name: 'Baz')
+            )
           ]
         ),
         Party.new(
           members: [
-            Member.new(name: 'Hoge'),
-            Member.new(name: 'Fuga')
+            Member.new(
+              creature: Creatures::Goblin.new(name: 'Hoge')
+            ),
+            Member.new(
+              creature: Creatures::Goblin.new(name: 'Fuga')
+            )
           ]
         )
       ]

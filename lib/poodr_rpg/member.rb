@@ -2,12 +2,12 @@
 
 module PoodrRpg
   class Member
-    def initialize(name:)
-      @name = name
+    def initialize(creature:)
+      @creature = creature
     end
 
     def name
-      @name
+      @creature.name
     end
   end
 end
