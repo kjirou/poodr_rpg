@@ -25,10 +25,17 @@ module PoodrRpg
 
       attack_target_party = rest_parties[0]
 
-      "#{name}(#{my_party.name}) did an action. Attacked to \"#{attack_target_party.name}\" party!"
+      [
+        "#{name}[#{creature.life}/#{creature.max_life}](#{my_party.name}) did an action.",
+        "Attacked to \"#{attack_target_party.name}\" party!"
+      ].join(' ')
     end
 
     private
+
+    def creature
+      @creature
+    end
 
     def find_my_party(parties)
       parties.find { |party| party.own_member?(self) }
