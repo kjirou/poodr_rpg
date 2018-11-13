@@ -22,10 +22,11 @@ module PoodrRpg
     end
 
     def to_text
-      text = "Turns: #{@turn_count}"
-      text += "\n#{@logs_for_each_turn[@turn_count]}"
-      text += "\n#{winner} won!" if winner
-      text
+      lines = []
+      lines << "Turns: #{@turn_count}"
+      lines << @logs_for_each_turn[@turn_count]
+      lines << "#{winner} won!" if winner
+      lines.join("\n")
     end
 
     private
