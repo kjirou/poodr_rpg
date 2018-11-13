@@ -18,7 +18,8 @@ module PoodrRpg
       @turn_count += 1
 
       member_to_do_action = choice_next_member_to_do_action
-      @logs_for_each_turn[@turn_count] = "#{member_to_do_action.name} acted."
+      action_log = member_to_do_action.do_action
+      @logs_for_each_turn[@turn_count] = action_log
     end
 
     def to_text

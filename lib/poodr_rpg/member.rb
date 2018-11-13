@@ -9,5 +9,9 @@ module PoodrRpg
     def name
       @creature.name
     end
+
+    def do_action
+      "#{name} did an action."
+    end
   end
 end
