@@ -33,9 +33,7 @@ module PoodrRpg
 
     private
 
-    def creature
-      @creature
-    end
+    attr_reader :creature
 
     def find_my_party(parties)
       parties.find { |party| party.own_member?(self) }

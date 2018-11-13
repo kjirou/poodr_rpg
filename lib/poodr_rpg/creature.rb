@@ -2,6 +2,8 @@
 
 module PoodrRpg
   class Creature
+    attr_reader :name, :max_life, :life
+
     def initialize(name:)
       @name = name
       @max_life = default_max_life
@@ -10,18 +12,6 @@ module PoodrRpg
 
     def default_max_life
       raise NotImplementedError
-    end
-
-    def name
-      @name
-    end
-
-    def max_life
-      @max_life
-    end
-
-    def life
-      @life
     end
   end
 end
