@@ -17,8 +17,8 @@ module PoodrRpg
     def transit_to_next_turn
       @turn_count += 1
 
-      member_to_act = choice_next_member_to_act
-      @logs_for_each_turn[@turn_count] = "#{member_to_act.name} acted."
+      member_to_do_action = choice_next_member_to_do_action
+      @logs_for_each_turn[@turn_count] = "#{member_to_do_action.name} acted."
     end
 
     def to_text
@@ -31,7 +31,7 @@ module PoodrRpg
 
     private
 
-    def choice_next_member_to_act
+    def choice_next_member_to_do_action
       all_members.sample
     end
 
