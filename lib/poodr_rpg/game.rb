@@ -5,6 +5,7 @@ module PoodrRpg
     def initialize
       parties = [
         Party.new(
+          name: 'Villagers',
           members: [
             Member.new(
               creature: Creatures::Villager.new(name: 'Foo')
@@ -18,6 +19,7 @@ module PoodrRpg
           ]
         ),
         Party.new(
+          name: 'Goblins',
           members: [
             Member.new(
               creature: Creatures::Goblin.new(name: 'Hoge')

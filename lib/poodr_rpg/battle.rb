@@ -18,7 +18,7 @@ module PoodrRpg
       @turn_count += 1
 
       member_to_do_action = choice_next_member_to_do_action
-      action_log = member_to_do_action.do_action
+      action_log = member_to_do_action.do_action(@parties)
       @logs_for_each_turn[@turn_count] = action_log
     end
 
