@@ -7,7 +7,7 @@ module PoodrRpg
     end
 
     def name
-      @creature.name
+      creature.name
     end
 
     def do_action(all_parties)
