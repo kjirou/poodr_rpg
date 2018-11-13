@@ -3,7 +3,23 @@
 module PoodrRpg
   class Game
     def initialize
-      @battle = PoodrRpg::Battle.new
+      parties = [
+        Party.new(
+          members: [
+            Member.new(name: 'Foo'),
+            Member.new(name: 'Bar'),
+            Member.new(name: 'Baz')
+          ]
+        ),
+        Party.new(
+          members: [
+            Member.new(name: 'Hoge'),
+            Member.new(name: 'Fuga')
+          ]
+        )
+      ]
+
+      @battle = PoodrRpg::Battle.new(parties: parties)
     end
 
     def run

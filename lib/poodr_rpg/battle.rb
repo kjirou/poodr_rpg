@@ -2,13 +2,14 @@
 
 module PoodrRpg
   class Battle
-    def initialize
+    def initialize(parties:)
+      @parties = parties
       @turn_count = 0
     end
 
     def winner
       if @turn_count >= 4
-        'A Team'
+        "#{@parties[0].members[0].name}'s party"
       end
     end
 
@@ -19,7 +20,7 @@ module PoodrRpg
 
     def to_text
       text = "Turns: #{@turn_count}"
-      text += "\n#{winner} is won!" if winner
+      text += "\n#{winner} won!" if winner
       text
     end
   end
