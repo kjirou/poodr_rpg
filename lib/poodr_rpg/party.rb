@@ -18,5 +18,9 @@ module PoodrRpg
     def own_member?(member)
       @members.include?(member)
     end
+
+    def choice_member_to_be_attacked
+      members.sample
+    end
   end
 end

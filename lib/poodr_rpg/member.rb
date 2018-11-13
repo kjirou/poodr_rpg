@@ -25,15 +25,21 @@ module PoodrRpg
 
       attack_target_party = rest_parties[0]
 
+      attacked_member = choice_member_to_attack(attack_target_party)
+
       [
         "#{name}[#{creature.life}/#{creature.max_life}](#{my_party.name}) did an action.",
-        "Attacked to \"#{attack_target_party.name}\" party!"
+        "Attacked to \"#{attacked_member.name}(#{attack_target_party.name})\"!"
       ].join(' ')
     end
 
     private
 
     attr_reader :creature
+
+    def choice_member_to_attack(party)
+      party.choice_member_to_be_attacked
+    end
 
     def find_my_party(parties)
       parties.find { |party| party.own_member?(self) }
